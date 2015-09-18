@@ -1,4 +1,5 @@
-# Hubot: Hubot-usernowplaying
+
+# Hubot: Hubot-usernowplaying [![Build Status](https://travis-ci.org/thatarchguy/hubot-usernowplaying.svg)](https://travis-ci.org/thatarchguy/hubot-usernowplaying)
 
 A hubot script to show what users are listening to.
 
