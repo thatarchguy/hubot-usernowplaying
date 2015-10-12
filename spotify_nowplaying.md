@@ -1,6 +1,8 @@
 ## Send Spotify's nowplaying to api route
 
 
+### Linux (Arch tested)
+These two scripts can be a single script.  
 nowplaying.sh
 ```
 #!/bin/bash
@@ -33,4 +35,28 @@ curl --data "song=$PLAYING" http://[hubot-instance]:8080/hubot/nowplaying?user=k
 cronjob:
 ```
 */2 * * * * /usr/bin/nowplaying.sh
+```
+
+
+### OSX (Yosemite 10.10.5 tested)
+thanks @samuelchristian for hooking this up.  
+applescript
+```
+-- Main flow
+postToHubotTrack()
+
+-- Method to get the currently playing track
+on postToHubotTrack()
+    tell application "Spotify"
+        set currentArtist to artist of current track as string
+        set currentTrack to name of current track as string
+        
+        do shell script "curl --data song='" & currentArtist & " - " & currentTrack & "' http://[hubot-instance]:8080/hubot/nowplaying?user=schristian"
+    end tell
+end postToHubotTrack
+```
+
+cronjob:
+```
+*/2 * * * * /usr/bin/osascript /usr/bin/spotify-now-playing.scpt > /dev/null 2>&1
 ```

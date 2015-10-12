@@ -20,4 +20,4 @@ Figure out a way to post "song=Justin Bieber - Never say Never"
 curl --data "song=Justin Beiber - Never Say Never" http://[hubot-instance]:8080/hubot/nowplaying?user=klaw
 ```
 
-I included a guide on how to get scripts to do this with spotify on linux
+I included a guide on how to get scripts to do this with Spotify on Linux and OSX
