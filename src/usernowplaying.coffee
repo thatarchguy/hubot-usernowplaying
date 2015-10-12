@@ -12,6 +12,14 @@
 # Authors:
 #   Kevin L <kevin@stealsyour.pw>
 
+songs = [
+  "Shakira - Hips Don't Lie",
+  "R. Kelly - Trapped in the Closet",
+  "Spice Girls - Wannabe",
+  "Backstreet Boys - I Want It That Way",
+  "Justin Bieber - Never say Never"
+]
+
 module.exports = (robot) ->
   robot.router.post "/hubot/nowplaying", (req, res) ->
     user = req.query.user
@@ -34,5 +42,5 @@ module.exports = (robot) ->
     user = msg.match[1].trim()
     song = robot.brain.get("#{user}_nowplaying") or 0
     if song == 0
-      song = "Justin Bieber - Never say Never"
+      song = msg.random songs
     msg.send song
