@@ -1,25 +1,24 @@
 {
   "name": "hubot-usernowplaying",
   "description": "A hubot script to show what users are listening to.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Kevin <Kevin@stealsyour.pw>",
   "license": "MIT",
-
-  "keywords": ["hubot","hubot-scripts", "nowplaying"],
-
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "nowplaying"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/thatarchguy/hubot-usernowplaying.git"
   },
-
   "bugs": {
     "url": "https://github.com/thatarchguy/hubot-usernowplaying/issues"
   },
-
   "dependencies": {
     "coffee-script": ">=1.6"
   },
-
   "devDependencies": {
     "supertest": "*",
     "hubot": "*",
@@ -38,9 +37,7 @@
     "coveralls": "*",
     "grunt-coveralls": "*"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
