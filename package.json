@@ -1,7 +1,7 @@
 {
   "name": "hubot-usernowplaying",
   "description": "A hubot script to show what users are listening to.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Kevin <Kevin@stealsyour.pw>",
   "license": "MIT",
   "keywords": [
